@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGlf0bxHDkGuV60CofYW4lCFy6-M831L8SFA&usqp=CAU'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .restaurent-info {
+            width: 300px;
+            margin: 200px auto;
+            padding: 200px;
+            border: 1px solid #ccc;
+            border: 10px solid white;
+            border-radius: 5px;
+        }
+        .restaurent-img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            float: left;
+        }
+        .restaurent-details {
+            margin-left: 120px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="Restaurant">
+        <img class="restaurent-img" src="" alt="Restaurant">
+        <div class="Restaurent">
+            <h2><h2 style="color: rgb(236, 28, 0);">Flower Information</h2>
+            <p><strong>Name:</strong> <span id="restaurent-name"></span></p>
+            <p><strong>Cost:</strong> <span id="restaurent-cost"></span></p>
+            <p><strong>quantity:</strong> <span id="restaurent-quantity"></span></p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var params = new URLSearchParams(window.location.search);// accessing the query parameters from the current URL.//
+            var name = params.get('name');
+            var cost = params.get('cost');
+            var quantity = params.get('quantity');
+
+            document.getElementById('restaurent-name').innerText = name;
+            document.getElementById('restaurent-cost').innerText = cost;
+            document.getElementById('restaurent-quantity').innerText = quantity;
+            document.querySelector('.restaurent-img').src = getImageSrc(name);
+        };
+
+        function getImageSrc(name) {//which returns the URL of the flower image based on the flower name.//
+            switch (name) {
+                case 'Pizza':
+                    return 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emF8ZW58MHx8MHx8fDA%3D';
+                case 'Burger':
+                    return 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2VyfGVufDB8fDB8fHww';
+                case 'Sandwich':
+                    return 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FuZHdpY2h8ZW58MHx8MHx8fDA%3D';
+                default:
+                    return '';
+            }
+        }
+    </script>
+</body>
+</html

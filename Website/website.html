@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="food.css">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .food {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .food a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: rgb(244, 10, 37);
+        }
+        .food a:hover {
+            color: rgb(194, 59, 59);
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .food {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><h2 style="color: rgb(230, 10, 10);">Restaurant</h1>
+        <h1><h2 style="color: rgb(230, 10, 10);">Food <Menu></Menu></h1>
+        <div class="Restaurant">
+            <a href="food_info.html?name=Pizza&cost=$15&quantity=1" target="_blank">
+                <img class="Restaurant" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emF8ZW58MHx8MHx8fDA%3D" alt="Pizza">
+            </a>
+            <a href="food_info.html?name=Burger&cost=$13&quantity=1" target="_blank" >
+                <img class="Restaurant" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2VyfGVufDB8fDB8fHww" alt="Burger">
+            </a>
+            <a href="food_info.html?name=Sandwich&cost=$12&quantity=1" target="_blank">
+                <img class="Restaurant" src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FuZHdpY2h8ZW58MHx8MHx8fDA%3D" alt="Sandwich">
+            </a>
+        </div>
+    </div>
+   
+</body>
+</html>
